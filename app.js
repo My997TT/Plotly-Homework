@@ -2,7 +2,7 @@
 function myPlot(id) {
 
     // Get data from json
-    d3.json("samples.json").then((data) => {
+    d3.json("../data/samples.json").then((data) => {
         console.log(data);
 
         // Filter sample data
@@ -66,7 +66,7 @@ function myPlot(id) {
 
 //get sample data from json file
 function metadata(id) {
-    d3.json("samples.json").then((data) => {
+    d3.json("../data/samples.json").then((data) => {
         //get metadata 
         var metadata = data.metadata;
         console.log(metadata)
@@ -91,7 +91,7 @@ function optionChanged(id) {
 
 //Render data
 function init() {
-    d3.json("samples.json").then((data) => {
+    d3.json("../data/samples.json").then((data) => {
         console.log(data)
         //drop down menu
         var dropdown = d3.select("#selDataset");
