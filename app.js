@@ -70,7 +70,7 @@ function myPlot(id) {
         var layout_b = {
             xaxis: { title: "OTU ID" },
             height: 500,
-            width: 1500
+            width: 1000
         };
         // bubble plots
         Plotly.newPlot("bubble", data_2, layout_b);
