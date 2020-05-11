@@ -37,6 +37,20 @@ function myPlot(id) {
         //Bar plot
         Plotly.newPlot("bar", data_1, layout);
 
+        // data3 gauge variable
+        var data_3 = [
+            {
+                domain: { x: [0, 1], y: [0, 1] },
+                value: 10,
+                title: { text: "Belly Button Washing Frequency" },
+                type: "indicator",
+                mode: "gauge+number"
+            }
+        ];
+
+        var layout = { width: 600, height: 500, margin: { t: 0, b: 0 } };
+        Plotly.newPlot('gauge', data_3, layout);
+        
 
         //Bubble chart
         var trace2 = {
@@ -86,6 +100,7 @@ function metadata(id) {
 //Event function
 function optionChanged(id) {
     myPlot(id);
+    gauge(id);
     metadata(id);
 }
 
